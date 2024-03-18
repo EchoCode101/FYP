@@ -1,0 +1,90 @@
+<% layout("/layouts/boilerplate") %>
+<h4>Create a New Listing</h4>
+<div class="row">
+  <form action="/listings" method="post" novalidate class="needs-validation">
+    <div>
+      <label for="Title" class="form-label"> Title </label
+      ><input
+        id="Title"
+        type="text"
+        name="listing[title]"
+        required
+        placeholder="Add a catchy title here..."
+        class="form-control"
+      />
+      <div class="valid-feedback">Title looks good!</div>
+      <div class="invalid-feedback">Please provide a valid title.</div>
+    </div>
+    <div>
+      <label for="Description" class="form-label"> Description </label
+      ><textarea
+        id="Description"
+        class="form-control"
+        type="text"
+        name="listing[description]"
+        required
+        placeholder="Enter Description Here..."
+      ></textarea>
+      <div class="valid-feedback">Description looks good!</div>
+      <div class="invalid-feedback">Please provide a valid description.</div>
+    </div>
+    <div>
+      <label for="image" class="form-label"> Image URL/Link </label
+      ><input
+        id="image"
+        type="text"
+        name="listing[image]"
+        placeholder="image url here..."
+        class="form-control"
+      />
+      <div class="valid-feedback">Image looks good!</div>
+      <div class="invalid-feedback">Please provide a valid Image-URL.</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="Price" class="form-label">Price $</label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">$</span
+          ><input
+            id="Price"
+            name="listing[price]"
+            class="form-control"
+            placeholder="1000"
+            required
+          />
+          <div class="valid-feedback">Price looks good!</div>
+          <div class="invalid-feedback">Please provide a valid Price.</div>
+        </div>
+      </div>
+      <div class="col-md-8 ms-0">
+        <label for="Country" class="form-label" style="width: 26rem"
+          >Country </label
+        ><input
+          id="Country"
+          type="text"
+          name="listing[country]"
+          class="form-control"
+          placeholder="USA"
+          required
+        />
+        <div class="valid-feedback">Country looks good!</div>
+        <div class="invalid-feedback">Please provide a valid Country.</div>
+      </div>
+    </div>
+    <div>
+      <label for="Location" class="form-label">Location </label
+      ><input
+        id="Location"
+        type="text"
+        name="listing[location]"
+        placeholder="New York, NY, USA"
+        required
+        class="form-control"
+      />
+      <div class="valid-feedback">Location looks good!</div>
+      <div class="invalid-feedback">Please provide a valid Location.</div>
+    </div>
+
+    <button class="btn create-btn">Create</button>
+  </form>
+</div>
