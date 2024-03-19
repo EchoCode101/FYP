@@ -7,6 +7,22 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+/* All Listings */
+.row {
+  justify-content: center;
+}
+/* @media (max-width: 768px) {
+ .col {
+    flex: 0 0 59.3%;
+}
+} */
+@media (max-width: 575px) {
+ .col {
+    flex: 0 0 66.3%;
+}
+}
+/* All Listings */
+
 .container {
   flex: 1;
 }
@@ -48,7 +64,7 @@ body {
   text-decoration: underline;
 }
 /* Card */
-.card {
+.listing-card {
   border: none;
   margin-bottom: 2rem;
   /* transition: all .3s; */
@@ -134,4 +150,9 @@ input:not(:placeholder-shown) + label {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+.comt-del-btn:hover {
+  background-color: rgb(236, 79, 96);
+  color: #fff;
+  border-color: #ff0000;
 }
