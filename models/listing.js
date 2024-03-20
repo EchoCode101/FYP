@@ -40,6 +40,10 @@ const listingSchema = Schema({
       ref: "Review",
     },
   ],
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
   createdAt: { type: Date, default: Date.now() },
 });
 

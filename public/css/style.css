@@ -17,9 +17,9 @@ body {
 }
 } */
 @media (max-width: 575px) {
- .col {
+  .col {
     flex: 0 0 66.3%;
-}
+  }
 }
 /* All Listings */
 
@@ -112,9 +112,9 @@ h4 {
   color: #fff !important;
   transform: scale(1.07);
 }
-
+/* 
 p {
-  margin: 20px 0;
+  margin:20px 0;
   position: relative;
   display: inline-block;
 }
@@ -140,7 +140,7 @@ p input:focus + label,
 input:not(:placeholder-shown) + label {
   opacity: 1;
   transform: scale(0.75) translateY(-70%) translateX(-14px);
-}
+} */
 /* show.ejs Page Form */
 
 .show-image {
@@ -155,4 +155,7 @@ input:not(:placeholder-shown) + label {
   background-color: rgb(236, 79, 96);
   color: #fff;
   border-color: #ff0000;
+}
+.show-crd-txt {
+  line-height: 1.75;
 }
