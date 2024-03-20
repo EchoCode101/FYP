@@ -5,7 +5,7 @@ const { ListingSchema } = require("../schema.js");
 const ExpressError = require("../utils/ExpressErrors.js");
 const Listing = require("../models/listing");
 const Review = require("../models/review");
-
+const { isLoggedIn } = require("../middleware.js");
 const validateListing = (req, res, next) => {
   let { error } = ListingSchema.validate(req.body);
   if (error) {
@@ -27,6 +27,7 @@ router.get(
 //New Route
 router.get(
   "/new",
+  isLoggedIn,
   wrapAsync(async (req, res) => {
     res.render("./listings/new.ejs");
   })
@@ -35,6 +36,7 @@ router.get(
 // (CREATE Route)
 router.post(
   "/",
+  isLoggedIn,
   validateListing,
   wrapAsync(async (req, res, next) => {
     // let { title,description,price,image,location,country } = req.body;    //Too Long
@@ -50,6 +52,7 @@ router.post(
 //Edit Route
 router.get(
   "/:id/edit",
+  isLoggedIn,
   wrapAsync(async (req, res) => {
     let { id } = req.params;
     let listing = await Listing.findById(id);
@@ -74,6 +77,7 @@ router.put(
 //Delete Route
 router.delete(
   "/:id",
+  isLoggedIn,
   wrapAsync(async (req, res) => {
     let { id } = req.params;
     await Listing.findByIdAndDelete(id);
