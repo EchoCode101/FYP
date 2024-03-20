@@ -18,10 +18,10 @@ const {
 router
   .route("/")
   .get(wrapAsync(index))
-// .post(isLoggedIn, validateListing, wrapAsync(createListing));
-  .post((req, res, next) => { 
-    res.send(req.body)
-  })
+  .post(isLoggedIn, validateListing, wrapAsync(createListing));
+// .post((req, res, next) => {
+//   res.send(req.body)
+// })
 
 //New Route
 router.get("/new", isLoggedIn, wrapAsync(renderNewForm));
@@ -31,7 +31,7 @@ router
   .get(wrapAsync(showListings))
   .put(isLoggedIn, isOwner, validateListing, wrapAsync(updateListing))
   .delete(isLoggedIn, isOwner, wrapAsync(deleteListing));
-  
+
 //Edit Route
 router.get("/:id/edit", isLoggedIn, isOwner, wrapAsync(renderEditForm));
 
