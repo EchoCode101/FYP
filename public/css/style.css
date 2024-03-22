@@ -141,6 +141,7 @@ input:not(:placeholder-shown) + label {
   opacity: 1;
   transform: scale(0.75) translateY(-70%) translateX(-14px);
 } */
+
 /* show.ejs Page Form */
 
 .show-image {
@@ -158,4 +159,34 @@ input:not(:placeholder-shown) + label {
 }
 .show-crd-txt {
   line-height: 1.75;
+}
+
+/* edit.ejs Page Form */
+.edit-form-img-div {
+  width: 300px;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 0;
+  user-select: none;
+}
+.edit-form-img-div .edit-form-img {
+  width: 100%;
+  border-radius: 0.6rem;
+  object-fit: cover;
+  height: 180px;
+}
+
+/* MAP */
+
+#map{
+  border-radius: 1rem;
+  width: 850px;
+  height: 400px;
+  margin-bottom: 2rem;
+  margin-top: .75rem;
 }
